@@ -11,7 +11,7 @@ async function setupPlugin({ config, global }) {
     }
 
     global.senderPhoneNumber = config.senderPhoneNumber
-    const maxTimeout = 365 * 24 * 60 * 60
+    const maxTimeout = 365 * 24 * 60 * 60 // one year
     if (config.timeout <= 0 || config.timeout > maxTimeout) {
         throw new Error(`timeout is not supported`)
     } else {
