@@ -65,9 +65,7 @@ async function onEvent(event, { jobs, global }) {
             eventName: event.event,
         }
     }
-    const response = await jobs.sendMessageWithTwilio(request).runNow()
-
-    return response
+await jobs.sendMessageWithTwilio(request).runNow()
 }
 
 module.exports = {
