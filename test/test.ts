@@ -119,7 +119,7 @@ describe('plugin tests', () => {
             Authorization: `Basic ${basicToken}`,
         })
         expect(webhook1).toHaveProperty('method', 'POST')
-        expect(webhook1).toHaveProperty('body', 'Body=Hi my-event occured - PostHog&From=+3312345678&To=+12025551212')
+        expect(webhook1).toHaveProperty('body', 'Body=Hi my-event occurred - PostHog&From=+3312345678&To=+12025551212')
 
         const webhook2 = composeWebhook(mockIdentifyEvent, meta)
         expect(webhook2).toHaveProperty('url', 'https://api.twilio.com/2010-04-01/Accounts/account-sid/Messages.json')
@@ -128,6 +128,6 @@ describe('plugin tests', () => {
             Authorization: `Basic ${basicToken}`,
         })
         expect(webhook2).toHaveProperty('method', 'POST')
-        expect(webhook2).toHaveProperty('body', 'Body=Hi $identify occured - PostHog&From=+3312345678&To=+14155551212')
+        expect(webhook2).toHaveProperty('body', 'Body=Hi $identify occurred - PostHog&From=+3312345678&To=+14155551212')
     })
 })
