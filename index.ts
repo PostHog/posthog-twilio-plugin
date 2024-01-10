@@ -37,7 +37,7 @@ const plugin: Plugin<TwilioMetaInput> = {
                 Authorization: `Basic ${Buffer.from(`${config.accountSID}:${config.authToken}`).toString('base64')}`,
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
-            body: `Body=Hi ${event.event} occured - PostHog&From=${config.senderPhoneNumber}&To=${number}`,
+            body: `Body=Hi ${event.event} occurred - PostHog&From=${config.senderPhoneNumber}&To=${number}`,
             method: 'POST',
         } as Webhook
     },
